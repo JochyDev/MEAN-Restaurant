@@ -1,0 +1,47 @@
+<!-- Portfolio Section -->
+<div id="portfolio">
+    <div class="section-title text-center center">
+      <div class="overlay">
+        <h2>Gallery</h2>
+        <hr>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed.</p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="categories">
+          <!-- <ul class="cat">
+            <li>
+              <ol class="type">
+                <li><a href="#" data-filter="*" class="active">All</a></li>
+                <li><a href="#" data-filter=".breakfast">Breakfast</a></li>
+                <li><a href="#" data-filter=".lunch">Lunch</a></li>
+                <li><a href="#" data-filter=".dinner">Dinner</a></li>
+              </ol>
+            </li>
+          </ul> -->
+          <div class="clearfix"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="portfolio-items">
+            <div *ngFor="let product of products" class="col-sm-6 col-md-4 col-lg-4 dinner" [ngClass]="product.categoria.nombre">
+                <div class="portfolio-item">
+                  <div class="hover-bg"> <a href="img/portfolio/02-large.jpg" title="Dish Name" data-lightbox-gallery="gallery1">
+                    <mat-card class="example-card">
+                        <mat-card-header>
+                          <mat-card-title>{{product.nombre}}</mat-card-title>
+                          <mat-card-subtitle>{{product.precio | currency}}</mat-card-subtitle>
+                        </mat-card-header>
+                        <img mat-card-image [src]="product.url" alt="Photo of a Shiba Inu">
+                        <mat-card-content>
+                          <p>
+                            {{product.description}}
+                          </p>
+                        </mat-card-content>
+                      </mat-card>
+                      </a> </div>
+                </div>
+         </div>
+    </div>
+  </div>

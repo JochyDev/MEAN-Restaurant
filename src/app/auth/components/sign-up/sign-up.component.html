@@ -1,0 +1,13 @@
+
+<div class="wrapper">
+    <form [formGroup]="form" (ngSubmit)="createUser($event)" class="form-signin">       
+      <h2 class="form-signin-heading">Please Sign Up</h2>
+      <input type="text" formControlName="nombre" class="form-control" name="username" placeholder="User Name" required="" autofocus="" />
+      <input type="text" formControlName="correo" class="form-control" name="mail" placeholder="Email Address" required="" autofocus="" />
+      <input type="password" formControlName="password" class="form-control" name="password" placeholder="Password" required=""/>      
+      <label class="checkbox">
+        <a routerLink="acount" value="" id="rememberMe" name="rememberMe"> I Have an Acount</a>
+      </label>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign Up</button>   
+    </form>
+  </div>
