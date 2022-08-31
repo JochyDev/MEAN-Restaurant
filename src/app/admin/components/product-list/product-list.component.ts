@@ -2,6 +2,7 @@ import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTable } from '@angular/material/table';
+import { ProductsService } from 'src/app/core/services/products.service';
 import { Product } from 'src/app/models/product.model';
 import { ProductListDataSource} from './product-list-datasource';
 
@@ -20,8 +21,9 @@ export class ProductListComponent implements AfterViewInit {
   displayedColumns = ['id', 'name'];
 
   constructor(
+    productsService: ProductsService,
   ) {
-    this.dataSource = new ProductListDataSource();
+    this.dataSource = new ProductListDataSource(productsService);
   }
 
 
